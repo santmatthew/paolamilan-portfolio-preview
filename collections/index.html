@@ -1,12 +1,14 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Showcasing beautiful artwork"><title>Collections | Artist Portfolio</title><!-- Preconnect to image domain for faster loading --><link rel="preconnect" href="/images"><!-- DNS prefetch for potential external resources --><link rel="dns-prefetch" href="//fonts.googleapis.com"><!-- Open Graph --><meta property="og:title" content="Collections | Artist Portfolio"><meta property="og:description" content="Showcasing beautiful artwork"><meta property="og:type" content="website"><!-- Performance hints --><meta name="theme-color" content="#FF6B9D"><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- Critical CSS is inlined by Astro --><!-- Design System --><style is:global>
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Showcasing beautiful artwork"><title>Collections | Paola Milán</title><!-- Preconnect to image domain for faster loading --><link rel="preconnect" href="/images"><!-- DNS prefetch for potential external resources --><link rel="dns-prefetch" href="//fonts.googleapis.com"><!-- Open Graph --><meta property="og:title" content="Collections | Paola Milán"><meta property="og:description" content="Showcasing beautiful artwork"><meta property="og:type" content="website"><!-- Performance hints --><meta name="theme-color" content="#FF6B9D"><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- Critical CSS is inlined by Astro --><!-- Design System --><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet"><style is:global>
   :root {
-    --color-primary: #FF6B9D !important;
-    --color-secondary: #A55EEA !important;
+    --color-primary: #000000 !important;
+    --color-secondary: #000000 !important;
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
-    font-weight: 400 !important;
+    font-family: "Lato", sans-serif !important;
+    font-weight: 300 !important;
     font-size: 1rem !important;
     letter-spacing: normal !important;
     text-transform: none;
@@ -14,19 +16,19 @@
 
   /* Logo styles */
   .logo {
-    font-weight: 700 !important;
-    font-size: 2.5rem !important;
-    letter-spacing: normal !important;
-    text-transform: none !important;
+    font-weight: 400 !important;
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
   }
 
   /* Heading styles */
   h1, h2, h3, h4, h5, h6,
   .hero-text h1,
   .page-header h1 {
-    font-weight: 700 !important;
+    font-weight: 300 !important;
     letter-spacing: normal !important;
-    text-transform: none !important;
+    text-transform: uppercase !important;
   }
 
   h1, .hero-text h1, .page-header h1 {
@@ -35,7 +37,7 @@
 
   .nav a,
   .footer-links a {
-    font-weight: 400 !important;
+    font-weight: 300 !important;
     font-size: 1rem !important;
     letter-spacing: normal !important;
     text-transform: none !important;
@@ -44,7 +46,7 @@
   /* Apply gradient to elements that use it */
   .logo,
   .page-header h1 {
-    background: linear-gradient(135deg, #FF6B9D, #A55EEA) !important;
+    background: #000000 !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
@@ -52,49 +54,48 @@
 
   /* Hero text - conditionally apply gradient or solid color */
   .hero-text h1 {
-    background: linear-gradient(135deg, #FF6B9D, #A55EEA) !important;
-         -webkit-background-clip: text !important;
-         -webkit-text-fill-color: transparent !important;
-         background-clip: text !important;
+    color: #FFFFFF !important;
+         background: none !important;
+         -webkit-text-fill-color: unset !important;
   }
 
   /* Update other elements that use primary color */
   .header {
-    border-bottom-color: #FF6B9D !important;
+    border-bottom-color: #000000 !important;
   }
 
   .nav a::after {
-    background: #FF6B9D !important;
+    background: #000000 !important;
   }
 
   .hero-dot.active {
-    background: #FF6B9D !important;
+    background: #000000 !important;
   }
 
   .collection-info h2,
   .painting-details h3,
   .painting-info h1 {
-    color: #FF6B9D !important;
+    color: #000000 !important;
   }
 
   .carousel-thumb.active {
-    border-color: #FF6B9D !important;
+    border-color: #000000 !important;
   }
 
   /* Footer styles */
   .footer {
-    background: #2D3436 !important;
+    background: #2d3436 !important;
   }
 
   .footer-links a {
-    color: #FF6B9D !important;
+    color: #FFFFFF !important;
   }
 
   /* Button styles */
   .btn-action,
   .hero-action-button {
-    background: #FF6B9D !important;
-    color: #FFFFFF !important;
+    background: #3a3a3a !important;
+    color: #ffffff !important;
     padding: 0.75rem 1.5rem !important;
     border: none !important;
     border-radius: 4px !important;
@@ -112,11 +113,11 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   }
 </style><link rel="stylesheet" href="/paolamilan-portfolio-preview/_astro/style.CC2D1fM_.css"><script type="module">const c=document.querySelectorAll(".thumbnail-carousel");c.forEach(s=>{const t=s.querySelectorAll(".thumbnail-carousel-slide");if(t.length<=1)return;let e=0,l=null;function a(){t[e].classList.remove("active"),e=(e+1)%t.length,t[e].classList.add("active")}const n=s.closest(".collection-card");n&&(n.addEventListener("mouseenter",()=>{l||(l=setInterval(a,1e3))}),n.addEventListener("mouseleave",()=>{l&&(clearInterval(l),l=null,t[e].classList.remove("active"),e=0,t[e].classList.add("active"))}))});
-</script></head> <body> <header class="header"> <div class="header-content"> <a href="/" class="logo">Artist Name</a> <nav class="nav"> <a href="/" data-ui-key="home">Home</a> <a href="/collections" data-ui-key="collections">Collections</a>    </nav> </div> </header> <main>  <div class="container"> <div class="page-header"> <h1>Collections</h1> <p>Curated selections of artwork organized by theme and style</p> </div> <p style="text-align: center; color: var(--color-text-light); margin-top: 4rem;"> No collections available yet. </p> </div>  </main> <footer class="footer"> <div class="footer-content"> <div class="footer-links"> <a href="/" data-ui-key="home">Home</a> <a href="/collections" data-ui-key="collections">Collections</a>    </div>  <p>&copy; 2025 Artist Name. <span data-ui-key="all_rights_reserved">All rights reserved</span>.</p> </div> </footer> <script>(function(){const currentLang = "en";
+</script></head> <body> <header class="header"> <div class="header-content"> <a href="/" class="logo">Paola Milán</a> <nav class="nav"> <a href="/" data-ui-key="home">Home</a> <a href="/collections/available" data-collection-slug="available">Available</a><a href="/collections/past-work" data-collection-slug="past-work">Past work</a> <a href="/my-work" data-page-slug="my-work">My work</a><a href="/workshops" data-page-slug="workshops">Workshops</a><a href="/contact" data-page-slug="contact">Contact Me</a> <a href="mailto:hola@paolamilan.com" class="nav-icon-link" aria-label="Contact via email" title="Contact"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path> <polyline points="22,6 12,13 2,6"></polyline> </svg> </a> <a href="https://instagram.com/paolamilan.art" class="nav-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram" title="Instagram"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect> <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path> <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line> </svg> </a> </nav> </div> </header> <main>  <div class="container"> <div class="page-header"> <h1>Collections</h1> <p>Curated selections of artwork organized by theme and style</p> </div> <div class="collections-grid"> <a href="/collections/available" class="collection-card"> <div class="collection-preview"> <div class="thumbnail-carousel"> <div class="thumbnail-carousel-slide active"> <img src="/paolamilan-portfolio-preview/images/mi-jardin-2-medium.webp" alt="" loading="lazy" width="800" height="600"> </div><div class="thumbnail-carousel-slide "> <img src="/paolamilan-portfolio-preview/images/donde-crecen-los-cactus-1-medium.webp" alt="" loading="lazy" width="800" height="600"> </div><div class="thumbnail-carousel-slide "> <img src="/paolamilan-portfolio-preview/images/donde-el-desierto-1-medium.webp" alt="" loading="lazy" width="800" height="600"> </div><div class="thumbnail-carousel-slide "> <img src="/paolamilan-portfolio-preview/images/loreto-1-medium.webp" alt="" loading="lazy" width="800" height="600"> </div> </div> </div> <div class="collection-info"> <h2>Available</h2> <p>Available paintings.</p> </div> </a><a href="/collections/past-work" class="collection-card"> <div class="collection-preview"> <div style="width: 100%; height: 100%; background: linear-gradient(135deg, var(--color-primary), var(--color-purple));"></div> </div> <div class="collection-info"> <h2>Past work</h2> <p>0 paintings</p> </div> </a> </div> </div>  </main> <footer class="footer"> <div class="footer-content"> <div class="footer-links"> <a href="/" data-ui-key="home">Home</a> <a href="/collections" data-ui-key="collections">Collections</a> <a href="/my-work" data-page-slug="my-work">My work</a><a href="/workshops" data-page-slug="workshops">Workshops</a><a href="/contact" data-page-slug="contact">Contact Me</a> <a href="mailto:hola@paolamilan.com" class="footer-icon-link" aria-label="Contact via email" title="Contact"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path> <polyline points="22,6 12,13 2,6"></polyline> </svg> </a> <a href="https://instagram.com/paolamilan.art" class="footer-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram" title="Instagram"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect> <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path> <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line> </svg> </a> </div> <div class="footer-language-selector"> <label for="language-select" style="margin-right: 0.1rem; font-size: 0.9rem;" data-ui-key="language">Language</label> <span style="margin-right: 0.5rem; font-size: 0.9rem;">:</span> <select id="language-select" aria-label="Select language"> <option value="en"> English </option><option value="es"> Spanish </option> </select> </div> <p>&copy; 2025 Paola Milán. <span data-ui-key="all_rights_reserved">All rights reserved</span>.</p> </div> </footer> <script>(function(){const currentLang = "en";
 const defaultLang = "en";
-const allUiTranslations = {"en":{"home":"Home","collections":"Collections","other_collections":"Other Collections","contact":"Contact","instagram":"Instagram","language":"Language","all_rights_reserved":"All rights reserved","no_collections":"No collections yet. Add some through the admin panel!","no_paintings":"No paintings in this collection yet.","back_to_collections":"Back to Collections","year":"Year","medium":"Medium","dimensions":"Dimensions","paintings":"paintings","explore_curated_selections":"Explore curated selections of artwork","curated_selections":"Curated selections of artwork organized by theme and style","no_collections_available":"No collections available yet.","about_artist":"About the Artist"}};
-const allPageTitles = {"en":{}};
-const allCollectionTitles = {"en":{}};
+const allUiTranslations = {"en":{"home":"Home","collections":"Collections","other_collections":"Other Collections","contact":"Contact","instagram":"Instagram","language":"Language","all_rights_reserved":"All rights reserved","no_collections":"No collections yet. Add some through the admin panel!","no_paintings":"No paintings in this collection yet.","back_to_collections":"Back to Collections","year":"Year","medium":"Medium","dimensions":"Dimensions","paintings":"paintings","explore_curated_selections":"Explore curated selections of artwork","curated_selections":"Curated selections of artwork organized by theme and style","no_collections_available":"No collections available yet.","about_artist":"About the Artist"},"es":{"home":"Inicio","collections":"Collections","other_collections":"Other Collections","contact":"Contact","instagram":"Instagram","language":"Idioma","all_rights_reserved":"Todos los derechos reservados","no_collections":"No collections yet. Add some through the admin panel!","no_paintings":"No paintings in this collection yet.","back_to_collections":"Back to Collections","year":"Year","medium":"Medium","dimensions":"Dimensions","paintings":"paintings","explore_curated_selections":"Explore curated selections of artwork","curated_selections":"Curated selections of artwork organized by theme and style","no_collections_available":"No collections available yet.","about_artist":"About the Artist"}};
+const allPageTitles = {"en":{"my-work":"My work","workshops":"Workshops","contact":"Contact Me"},"es":{"my-work":"Mi obra","workshops":"Talleres","contact":"Contacto"}};
+const allCollectionTitles = {"en":{"available":"Available","past-work":"Past work"},"es":{"available":"Disponibles","past-work":"Histórico"}};
 
     // Add lang parameter to all internal links
     document.addEventListener('DOMContentLoaded', () => {
