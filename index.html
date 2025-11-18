@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Showcasing beautiful artwork"><title>Artist Portfolio</title><!-- Preconnect to image domain for faster loading --><link rel="preconnect" href="/images"><!-- DNS prefetch for potential external resources --><link rel="dns-prefetch" href="//fonts.googleapis.com"><!-- Open Graph --><meta property="og:title" content="Artist Portfolio"><meta property="og:description" content="Showcasing beautiful artwork"><meta property="og:type" content="website"><!-- Performance hints --><meta name="theme-color" content="#FF6B9D"><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- Critical CSS is inlined by Astro --><!-- Design System --><style is:global>
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Showcasing beautiful artwork"><title>Artist Portfolio</title><!-- Preconnect to image domain for faster loading --><link rel="preconnect" href="/paolamilan-portfolio-preview/images"><!-- DNS prefetch for potential external resources --><link rel="dns-prefetch" href="//fonts.googleapis.com"><!-- Open Graph --><meta property="og:title" content="Artist Portfolio"><meta property="og:description" content="Showcasing beautiful artwork"><meta property="og:type" content="website"><!-- Performance hints --><meta name="theme-color" content="#FF6B9D"><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/paolamilan-portfolio-preview/favicon.svg"><!-- Critical CSS is inlined by Astro --><!-- Design System --><style is:global>
   :root {
     --color-primary: #FF6B9D !important;
     --color-secondary: #A55EEA !important;
@@ -112,7 +112,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   }
 </style><link rel="stylesheet" href="/paolamilan-portfolio-preview/_astro/style.CC2D1fM_.css"><script type="module">const o=document.getElementById("hero-carousel");if(o){let n=function(c){e.forEach((s,r)=>{s.classList.toggle("active",r===c)}),t.forEach((s,r)=>{s.classList.toggle("active",r===c)}),l=c};const e=o.querySelectorAll(".hero-slide"),t=o.querySelectorAll(".hero-dot");let l=0;e.length>1&&(setInterval(()=>{l=(l+1)%e.length,n(l)},5e3),t.forEach(c=>{c.addEventListener("click",()=>{const s=parseInt(c.dataset.index);n(s)})}))}const a=document.querySelectorAll(".thumbnail-carousel");a.forEach(n=>{const e=n.querySelectorAll(".thumbnail-carousel-slide");if(e.length<=1)return;let t=0,l=null;function c(){e[t].classList.remove("active"),t=(t+1)%e.length,e[t].classList.add("active")}const s=n.closest(".collection-card");s&&(s.addEventListener("mouseenter",()=>{l||(l=setInterval(c,1e3))}),s.addEventListener("mouseleave",()=>{l&&(clearInterval(l),l=null,e[t].classList.remove("active"),t=0,e[t].classList.add("active"))}))});
-</script></head> <body> <header class="header"> <div class="header-content"> <a href="/" class="logo">Artist Name</a> <nav class="nav"> <a href="/" data-ui-key="home">Home</a> <a href="/collections" data-ui-key="collections">Collections</a>    </nav> </div> </header> <main>    <div class="container">  <div class="page-header"> <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Collections</h2> <p>Explore curated selections of artwork</p> </div> <p style="text-align: center; color: var(--color-text-light);"> No collections yet. Add some through the admin panel! </p> </div>   </main> <footer class="footer"> <div class="footer-content"> <div class="footer-links"> <a href="/" data-ui-key="home">Home</a> <a href="/collections" data-ui-key="collections">Collections</a>    </div>  <p>&copy; 2025 Artist Name. <span data-ui-key="all_rights_reserved">All rights reserved</span>.</p> </div> </footer> <script>(function(){const currentLang = "en";
+</script></head> <body> <header class="header"> <div class="header-content"> <a href="/paolamilan-portfolio-preview/" class="logo">Artist Name</a> <nav class="nav"> <a href="/paolamilan-portfolio-preview/" data-ui-key="home">Home</a> <a href="/paolamilan-portfolio-preview/collections" data-ui-key="collections">Collections</a>    </nav> </div> </header> <main>    <div class="container">  <div class="page-header"> <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Collections</h2> <p>Explore curated selections of artwork</p> </div> <p style="text-align: center; color: var(--color-text-light);"> No collections yet. Add some through the admin panel! </p> </div>   </main> <footer class="footer"> <div class="footer-content"> <div class="footer-links"> <a href="/paolamilan-portfolio-preview/" data-ui-key="home">Home</a> <a href="/paolamilan-portfolio-preview/collections" data-ui-key="collections">Collections</a>    </div>  <p>&copy; 2025 Artist Name. <span data-ui-key="all_rights_reserved">All rights reserved</span>.</p> </div> </footer> <script>(function(){const currentLang = "en";
 const defaultLang = "en";
 const allUiTranslations = {"en":{"home":"Home","collections":"Collections","other_collections":"Other Collections","contact":"Contact","instagram":"Instagram","language":"Language","all_rights_reserved":"All rights reserved","no_collections":"No collections yet. Add some through the admin panel!","no_paintings":"No paintings in this collection yet.","back_to_collections":"Back to Collections","year":"Year","medium":"Medium","dimensions":"Dimensions","paintings":"paintings","explore_curated_selections":"Explore curated selections of artwork","curated_selections":"Curated selections of artwork organized by theme and style","no_collections_available":"No collections available yet.","about_artist":"About the Artist"}};
 const allPageTitles = {"en":{}};
@@ -192,9 +192,10 @@ const allCollectionTitles = {"en":{}};
       }
     });
   })();</script> </body> </html>  <script>(function(){const allCollectionData = {"en":{}};
+const allSettingsData = {"en":{"hero_text":"Welcome to my portfolio","hero_action_text":"Explore Collection","artist_name":"Artist Name","site_title":"Artist Portfolio"}};
 const defaultLang = "en";
 
-  // Update collection titles and descriptions based on language
+  // Update collection titles, descriptions, and settings based on language
   document.addEventListener('DOMContentLoaded', () => {
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     const activeLang = urlLang || defaultLang;
@@ -212,6 +213,23 @@ const defaultLang = "en";
           el.textContent = collectionData[slug][type];
         }
       });
+    }
+
+    // Update settings content based on active language
+    if (activeLang && allSettingsData[activeLang]) {
+      const settingsData = allSettingsData[activeLang];
+
+      // Update hero text
+      const heroTextEl = document.querySelector('.hero-text h1');
+      if (heroTextEl && settingsData.hero_text) {
+        heroTextEl.textContent = settingsData.hero_text;
+      }
+
+      // Update hero action button text
+      const heroActionBtn = document.querySelector('.hero-action-button');
+      if (heroActionBtn && settingsData.hero_action_text) {
+        heroActionBtn.textContent = settingsData.hero_action_text;
+      }
     }
   });
 })();</script>
