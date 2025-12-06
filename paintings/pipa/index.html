@@ -121,11 +121,43 @@ const defaultLang = "en";
 const allUiTranslations = {"en":{"home":"Home","collections":"Collections","other_collections":"Other Collections","contact":"Contact","instagram":"Instagram","language":"Language","all_rights_reserved":"All rights reserved","no_collections":"No collections yet. Add some through the admin panel!","no_paintings":"No paintings in this collection yet.","back_to_collections":"Back to Collections","year":"Year","medium":"Medium","dimensions":"Dimensions","paintings":"paintings","explore_curated_selections":"Explore curated selections of artwork","curated_selections":"Curated selections of artwork organized by theme and style","no_collections_available":"No collections available yet.","about_artist":"About the Artist"},"es":{"home":"Inicio","collections":"Collections","other_collections":"Other Collections","contact":"Contact","instagram":"Instagram","language":"Idioma","all_rights_reserved":"Todos los derechos reservados","no_collections":"No collections yet. Add some through the admin panel!","no_paintings":"No paintings in this collection yet.","back_to_collections":"Back to Collections","year":"Year","medium":"Medium","dimensions":"Dimensions","paintings":"paintings","explore_curated_selections":"Explore curated selections of artwork","curated_selections":"Curated selections of artwork organized by theme and style","no_collections_available":"No collections available yet.","about_artist":"About the Artist"}};
 const allPageTitles = {"en":{"my-work":"My work","workshops":"Workshops","contact":"Contact Me"},"es":{"my-work":"Mi obra","workshops":"Talleres","contact":"Contacto"}};
 const allCollectionTitles = {"en":{"available":"Available","past-work":"Past work"},"es":{"available":"Disponibles","past-work":"Histórico"}};
+const availableLanguages = ["en","es"];
 
     // Add lang parameter to all internal links
     document.addEventListener('DOMContentLoaded', () => {
       const urlLang = new URLSearchParams(window.location.search).get('lang');
-      const activeLang = urlLang || currentLang;
+
+      // Detect browser language if no URL parameter is set
+      let activeLang = urlLang;
+      if (!urlLang) {
+        // Check if we've already detected language this session
+        const sessionLang = sessionStorage.getItem('detectedLang');
+        if (sessionLang && availableLanguages.includes(sessionLang)) {
+          activeLang = sessionLang;
+        } else {
+          // Get browser language preference
+          const browserLang = navigator.language || navigator.userLanguage;
+          // Extract primary language code (e.g., 'es' from 'es-ES')
+          const primaryLang = browserLang.split('-')[0].toLowerCase();
+
+          // Check if browser language matches any available language
+          if (availableLanguages.includes(primaryLang)) {
+            activeLang = primaryLang;
+            sessionStorage.setItem('detectedLang', primaryLang);
+
+            // Redirect to the detected language if not default
+            if (primaryLang !== defaultLang) {
+              const url = new URL(window.location.href);
+              url.searchParams.set('lang', primaryLang);
+              window.location.href = url.toString();
+              return; // Stop execution as we're redirecting
+            }
+          } else {
+            activeLang = defaultLang;
+            sessionStorage.setItem('detectedLang', defaultLang);
+          }
+        }
+      }
 
       // Update UI translations based on active language
       function updateUITranslations(lang) {
