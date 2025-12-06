@@ -127,37 +127,56 @@ const availableLanguages = ["en","es"];
     document.addEventListener('DOMContentLoaded', () => {
       const urlLang = new URLSearchParams(window.location.search).get('lang');
 
+      console.log('[Locale] URL lang parameter:', urlLang);
+      console.log('[Locale] Available languages:', availableLanguages);
+      console.log('[Locale] Default language:', defaultLang);
+
       // Detect browser language if no URL parameter is set
       let activeLang = urlLang;
       if (!urlLang) {
         // Check if we've already detected language this session
         const sessionLang = sessionStorage.getItem('detectedLang');
+        console.log('[Locale] Session stored language:', sessionLang);
+
         if (sessionLang && availableLanguages.includes(sessionLang)) {
           activeLang = sessionLang;
+          console.log('[Locale] Using session language:', activeLang);
         } else {
           // Get browser language preference
           const browserLang = navigator.language || navigator.userLanguage;
           // Extract primary language code (e.g., 'es' from 'es-ES')
           const primaryLang = browserLang.split('-')[0].toLowerCase();
 
+          console.log('[Locale] Browser language:', browserLang);
+          console.log('[Locale] Primary language code:', primaryLang);
+
           // Check if browser language matches any available language
           if (availableLanguages.includes(primaryLang)) {
             activeLang = primaryLang;
             sessionStorage.setItem('detectedLang', primaryLang);
+            console.log('[Locale] Browser language matched! Setting active language to:', primaryLang);
 
             // Redirect to the detected language if not default
             if (primaryLang !== defaultLang) {
               const url = new URL(window.location.href);
               url.searchParams.set('lang', primaryLang);
+              console.log('[Locale] Redirecting to:', url.toString());
               window.location.href = url.toString();
               return; // Stop execution as we're redirecting
+            } else {
+              console.log('[Locale] Browser language matches default, no redirect needed');
             }
           } else {
             activeLang = defaultLang;
             sessionStorage.setItem('detectedLang', defaultLang);
+            console.log('[Locale] Browser language not available, using default:', defaultLang);
           }
         }
+      } else {
+        console.log('[Locale] Using URL parameter language:', urlLang);
       }
+
+      console.log('[Locale] Final active language:', activeLang);
 
       // Update UI translations based on active language
       function updateUITranslations(lang) {
