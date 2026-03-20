@@ -1,0 +1,527 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>paomilan-landing</title><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet"><style is:global>
+  :root {
+    --color-primary: #000000 !important;
+    --color-secondary: #000000 !important;
+  }
+
+  body {
+    font-family: "Lato", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: normal !important;
+    text-transform: none;
+  }
+
+  /* Logo styles */
+  .logo {
+    font-weight: 400 !important;
+    font-size: 1.2rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+  }
+
+  /* Heading styles */
+  h1, h2, h3, h4, h5, h6,
+  .hero-text h1,
+  .page-header h1 {
+    font-weight: 400 !important;
+    letter-spacing: normal !important;
+    text-transform: uppercase !important;
+  }
+
+  h1, .hero-text h1, .page-header h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .nav a,
+  .footer-links a {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+  }
+
+  /* Apply gradient or solid color to headings */
+  .logo,
+  .page-header h1,
+  .collection-section-header h2 {
+    color: #000000 !important;
+         background: none !important;
+         -webkit-text-fill-color: unset !important;
+  }
+
+  /* Hero text - conditionally apply gradient or solid color */
+  .hero-text h1 {
+    color: #FFFFFF !important;
+         background: none !important;
+         -webkit-text-fill-color: unset !important;
+  }
+
+  /* Update other elements that use primary color */
+  .header {
+    border-bottom-color: #000000 !important;
+  }
+
+  .nav a::after {
+    background: #000000 !important;
+  }
+
+  .hero-dot.active {
+    background: #000000 !important;
+  }
+
+  .collection-info h2,
+  .painting-details h3,
+  .painting-info h1 {
+    color: #000000 !important;
+  }
+
+  .carousel-thumb.active {
+    border-color: #000000 !important;
+  }
+
+  /* Footer styles */
+  .footer {
+    background: #2d3436 !important;
+  }
+
+  .footer-links a {
+    color: #FFFFFF !important;
+  }
+
+  /* Button styles */
+  .btn-action,
+  .hero-action-button {
+    background: #3a3a3a !important;
+    color: #ffffff !important;
+    padding: 0.75rem 1.5rem !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .btn-action:hover,
+  .hero-action-button:hover {
+    opacity: 0.9 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+</style><meta property="og:title" content="paomilan-landing"><meta property="og:image" content="/images/1772998151367-y0l6de-img-1750-large.webp"><link rel="stylesheet" href="/_astro/style.CCtmpNGP.css"><script type="module" src="/_astro/hoisted.D6rf9Q09.js"></script></head> <body class="lp-template" data-form-endpoint="https://api.paolamilan.com"> <section class="lp-hero" style="--lp-hero-ratio: 21/9;" data-section="0"> <span class="lp-hero-logo">Paola Milán</span> <div class="lp-hero-slide active"> <img src="/images/1772998151367-y0l6de-img-1750-hero.webp" alt="" style="object-position:50% 25%;" loading="eager"> </div><div class="lp-hero-slide"> <img src="/images/1769079797864-gbu45u-paradise-hero.webp" alt="" style="object-position:50% 25%;" loading="lazy"> </div><div class="lp-hero-slide"> <img src="/images/1771264564024-5gj0p0-paola-milan-amarillo-hero.webp" alt="" style="object-position:50% 50%;" loading="lazy"> </div><div class="lp-hero-slide"> <img src="/images/1773498879677-cby9ua-img-2181-hero.webp" alt="" style="object-position:50% 50%;" loading="lazy"> </div><div class="lp-hero-slide"> <img src="/images/1771432957890-w2woek-photo-output-5-hero.webp" alt="" style="object-position:50% 50%;" loading="lazy"> </div> <div class="lp-hero-content lp-hero-content--center lp-hero-content--hide-mobile"> <h1 data-field="heading">Original contemporary art</h1> <p data-field="subheading">Available artworks and commissioned pieces for spaces with character.</p> </div> <div class="lp-hero-dots"> <button class="lp-hero-dot active" onclick="goHeroSlide(0)" aria-label="Go to slide 1"></button><button class="lp-hero-dot" onclick="goHeroSlide(1)" aria-label="Go to slide 2"></button><button class="lp-hero-dot" onclick="goHeroSlide(2)" aria-label="Go to slide 3"></button><button class="lp-hero-dot" onclick="goHeroSlide(3)" aria-label="Go to slide 4"></button><button class="lp-hero-dot" onclick="goHeroSlide(4)" aria-label="Go to slide 5"></button> </div> </section><section class="lp-paths" data-section="1"> <div class="lp-path"> <div class="lp-path-label" data-field="left_label">Available works</div> <h2 data-field="left_heading">Choose a piece</h2> <p data-field="left_body">Most of my paintings are already finished. Unique pieces born from intuition and experimentation with colour, ready to live in your space.</p> <button class="lp-btn" onclick="openModal('available')" data-campaign-cta data-field="left_cta_text">Browse &amp; inquire</button> </div> <div class="lp-path"> <div class="lp-path-label" data-field="right_label">Custom commission</div> <h2 data-field="right_heading">Create something unique</h2> <p data-field="right_body">A personalised artistic process to craft a piece for your space. It&#39;s not about choosing colours — it&#39;s about creating something truly genuine.</p> <button class="lp-btn lp-btn-outline" onclick="openModal('commission')" data-campaign-cta data-field="right_cta_text">Inquire about a commission</button> </div> </section><section class="lp-paintings-carousel" data-section="2"> <div class="lp-carousel-header"> <h2 data-field="heading">Available paintings</h2> <div class="lp-carousel-arrows"> <button class="lp-carousel-arrow" onclick="slidePaintings(-1)" aria-label="Previous"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"></path></svg></button> <button class="lp-carousel-arrow" onclick="slidePaintings(1)" aria-label="Next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"></path></svg></button> </div> </div> <div class="lp-carousel-track-wrapper"> <div class="lp-carousel-track" id="paintingsTrack"> <div class="lp-carousel-card" onclick="openPaintingDetail(0)" data-painting-id="224"> <img src="/images/1771431828834-2vl0r6-paolamilan-angels3-medium.webp" alt="Whispering Angels" loading="lazy"> <h3>Whispering Angels</h3> <span>2025 · Mixed media</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(1)" data-painting-id="209"> <img src="/images/1772998151367-y0l6de-img-1750-medium.webp" alt="Antonio" loading="lazy"> <h3>Antonio</h3> <span>2025 · Mixed media on linen</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(2)" data-painting-id="205"> <img src="/images/1773480766235-y1inbe-azul-insitu-medium.webp" alt="Diptych Blues" loading="lazy"> <h3>Diptych Blues</h3> <span>2023 · Cotton canvases</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(3)" data-painting-id="226"> <img src="/images/1765976986929-6wov52-img-6037-medium.webp" alt="Malta" loading="lazy"> <h3>Malta</h3> <span>2025 · Acrylics on cotton</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(4)" data-painting-id="204"> <img src="/images/1773668367685-3n12mc-img-2430-medium.webp" alt="Victor" loading="lazy"> <h3>Victor</h3> <span>2023 · Mixed media on linen</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(5)" data-painting-id="243"> <img src="/images/1768506671780-bduv7n-4b395582-4db7-45a4-be22-e7fe6bf2be00-medium.webp" alt="Paradise" loading="lazy"> <h3>Paradise</h3> <span>2026 · Mixed media</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(6)" data-painting-id="265"> <img src="/images/1774018450866-6knp8r-img-2635-medium.webp" alt="Those Moments with Them" loading="lazy"> <h3>Those Moments with Them</h3> <span>2026 · Mixed media on linen</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(7)" data-painting-id="212"> <img src="/images/1772018933020-gnv69i-paolamilan-w6-medium.webp" alt="Present" loading="lazy"> <h3>Present</h3> <span>2026 · Mixed media</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(8)" data-painting-id="208"> <img src="/images/1773925651669-sc2re3-img-2529-medium.webp" alt="Mela" loading="lazy"> <h3>Mela</h3> <span>2023 · Mixed media on linen</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(9)" data-painting-id="238"> <img src="/images/universo-1-medium.webp" alt="Universe" loading="lazy"> <h3>Universe</h3> <span>2020 · Mixed media on cotton</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(10)" data-painting-id="202"> <img src="/images/zafiro-1-medium.webp" alt="Sapphire" loading="lazy"> <h3>Sapphire</h3> <span>2020 · Acrylics on cotton</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(11)" data-painting-id="234"> <img src="/images/1769891177902-djbi7f-af791a05-195d-42b7-8cfa-17c02547d67f-medium.webp" alt="My Beautiful Chaos" loading="lazy"> <h3>My Beautiful Chaos</h3> <span>2026 · Mixed media</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(12)" data-painting-id="194"> <img src="/images/1773513702384-944c23-photo-output-2-medium.webp" alt="Pink Desert" loading="lazy"> <h3>Pink Desert</h3> <span>2025 · Mixed media on linen</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(13)" data-painting-id="230"> <img src="/images/1765979756586-pz3ktj-img-6051-medium.webp" alt="The Dream in the Fields" loading="lazy"> <h3>The Dream in the Fields</h3> <span>2024 · Mixed media on cotton</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(14)" data-painting-id="211"> <img src="/images/1773498640436-7zci14-loreto-paolamilan-medium.webp" alt="Loreto" loading="lazy"> <h3>Loreto</h3> <span>2024 · Mixed media on cotton</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(15)" data-painting-id="260"> <img src="/images/estructurando-el-punto-3-medium.webp" alt="Structuring the Point" loading="lazy"> <h3>Structuring the Point</h3> <span>2020 · Acrylic on cotton</span> </div><div class="lp-carousel-card" onclick="openPaintingDetail(16)" data-painting-id="193"> <img src="/images/mi-jardin-3-original.heic-medium.webp" alt="My Garden" loading="lazy"> <h3>My Garden</h3> <span>2024 · Mixed media on cotton</span> </div> </div> </div> </section> <!-- Painting Detail Lightbox --> <div class="lp-painting-lightbox" id="paintingLightbox"> <div class="lp-painting-lightbox-inner"> <button class="lp-painting-lightbox-close" onclick="closePaintingDetail()">&times;</button> <div class="lp-painting-lightbox-main"> <img id="paintingLightboxImg" src="" alt=""> </div> <div class="lp-painting-lightbox-thumbs" id="paintingLightboxThumbs"></div> <div class="lp-painting-lightbox-info"> <h3 id="paintingLightboxTitle"></h3> <p id="paintingLightboxMeta"></p> <button class="lp-btn" id="paintingLightboxCta" onclick="inquireAboutPainting()" data-ui-key="wizard_inquire_piece">Inquire about this piece</button> </div> </div> </div> <script>(function(){const paintingsData = [{"id":224,"title":"Whispering Angels","year":2025,"medium":"Mixed media","dimensions":"70 × 160 cm","images":["/images/1771431828834-2vl0r6-paolamilan-angels3-large.webp","/images/1771431837943-bdb5se-paolamilan-ok-signature-large.webp","/images/1771432906950-1h24f8-photo-output-6-large.webp","/images/1771432957890-w2woek-photo-output-5-large.webp","/images/1773151794378-h22c1d-paola-dimensiones-ig-large.webp","/images/1773151817690-t6do3e-paola-dimensiones-ig-large.webp"]},{"id":209,"title":"Antonio","year":2025,"medium":"Mixed media on linen","dimensions":"130 x 97 cm","images":["/images/1772998151367-y0l6de-img-1750-large.webp","/images/1772998154112-0khfih-img-1751-large.webp","/images/1773134819625-7q2mml-img-1780-large.webp","/images/1773134986554-34wf3r-paola-antonio-large.webp","/images/1773134989727-eiob5s-paola-antonio2-large.webp","/images/1773135905110-ux38rw-img-1856-large.webp"]},{"id":205,"title":"Diptych Blues","year":2023,"medium":"Cotton canvases","dimensions":"194 x 130 cm","images":["/images/1773480766235-y1inbe-azul-insitu-large.webp","/images/1773480772293-jwi7d7-diptico-azul-ok-large.webp","/images/1773480823250-or1b5k-photo-output-2-large.webp","/images/1773480827242-h35zxi-photo-output-3-large.webp","/images/1773751904090-yo3fya-img-2192-large.webp","/images/1773751916237-8c4ls3-img-2353-large.webp","/images/1773751974404-pjic7y-img-2459-large.webp","/images/1773752002440-lkivsf-img-2455-large.webp","/images/1773752367259-s3nja8-photo-output-0-large.webp","/images/1773752372694-vq4apn-photo-output-1-large.webp","/images/1773752377518-evz50h-img-2065-large.webp","/images/1773752446552-dcxhcv-img-2068-large.webp","/images/1773752450732-xtwxe8-img-2067-large.webp"]},{"id":226,"title":"Malta","year":2025,"medium":"Acrylics on cotton","dimensions":"100 x 81 / 100 x 100 cm","images":["/images/1765976986929-6wov52-img-6037-large.webp","/images/1766346784945-zmw6e8-img-6232-large.webp","/images/1766346790884-1bdvuq-img-6233-large.webp","/images/1773132721450-70i5yg-photo-output-2-large.webp","/images/1773136760673-icicnp-img-1857-large.webp","/images/1773136769477-nwxeyg-img-1859-large.webp"]},{"id":204,"title":"Victor","year":2023,"medium":"Mixed media on linen","dimensions":"130 x 97 cm","images":["/images/1773668367685-3n12mc-img-2430-large.webp","/images/1773668374942-ro2l67-img-2431-large.webp","/images/1773668383005-yhwhv1-img-2434-large.webp","/images/1773668549013-iz4yll-victor-paola-milan-large.webp","/images/1773669084053-pfa1bl-img-2436-large.webp"]},{"id":243,"title":"Paradise","year":2026,"medium":"Mixed media","dimensions":"140 x 110 cm","images":["/images/1768506671780-bduv7n-4b395582-4db7-45a4-be22-e7fe6bf2be00-large.webp","/images/1768506673891-l1dftz-4d1746b2-594f-40b6-852f-33a21c7a1a0b-large.webp","/images/1769079741670-q7y2iv-photo-output-large.webp","/images/1769079797864-gbu45u-paradise-large.webp","/images/1773497579899-qsgzt2-paradise-paolamilan-large.webp"]},{"id":265,"title":"Those Moments with Them","year":2026,"medium":"Mixed media on linen","dimensions":"65 x 55 cm","images":["/images/1774018450866-6knp8r-img-2635-large.webp","/images/1774018467806-jx5dsa-img-2637-large.webp","/images/1774018472549-ci6anz-photo-output-large.webp","/images/1774018598719-nb2x7f-img-2666-large.webp"]},{"id":212,"title":"Present","year":2026,"medium":"Mixed media","dimensions":"92 x 73 cm","images":["/images/1772018933020-gnv69i-paolamilan-w6-large.webp","/images/1772019392032-aq5oop-paolamilan-present-w-large.webp","/images/1773480423985-tjt7l4-paolamilan-present-large.webp"]},{"id":208,"title":"Mela","year":2023,"medium":"Mixed media on linen","dimensions":"130 x 97 cm","images":["/images/1773925651669-sc2re3-img-2529-large.webp","/images/1773925654632-608dq2-img-2535-large.webp"]},{"id":238,"title":"Universe","year":2020,"medium":"Mixed media on cotton","dimensions":"100 x 100 cm","images":["/images/universo-1-large.webp","/images/universo-2-large.webp","/images/universo-3-large.webp"]},{"id":202,"title":"Sapphire","year":2020,"medium":"Acrylics on cotton","dimensions":"100 x 81 cm","images":["/images/zafiro-1-large.webp","/images/zafiro-2-large.webp","/images/zafiro-4-large.webp","/images/zafiro-5-large.webp","/images/zafiro-6-large.webp"]},{"id":234,"title":"My Beautiful Chaos","year":2026,"medium":"Mixed media","dimensions":"92 x 73 cm","images":["/images/1769891177902-djbi7f-af791a05-195d-42b7-8cfa-17c02547d67f-large.webp","/images/1769891201438-xsqwup-photo-output-8-large.webp","/images/1773309234137-5s6b7c-photo-output-5-large.webp","/images/1773309249719-c5t7yy-photo-output-6-large.webp"]},{"id":194,"title":"Pink Desert","year":2025,"medium":"Mixed media on linen","dimensions":"130 x 97 cm","images":["/images/1773513702384-944c23-photo-output-2-large.webp","/images/1773513708980-ybjd8t-img-2215-large.webp","/images/1773513720712-gd32sh-img-2213-large.webp"]},{"id":230,"title":"The Dream in the Fields","year":2024,"medium":"Mixed media on cotton","dimensions":"92 x 73 cm","images":["/images/1765979756586-pz3ktj-img-6051-large.webp","/images/1765979764311-bur4zm-img-6049-large.webp","/images/1771264564024-5gj0p0-paola-milan-amarillo-large.webp","/images/1771264568886-b6q6cq-paola-milan-amarillo2-large.webp","/images/1771264574890-otkn3q-paola-milan-amarillo3-large.webp"]},{"id":211,"title":"Loreto","year":2024,"medium":"Mixed media on cotton","dimensions":"120 x 120 cm","images":["/images/1773498640436-7zci14-loreto-paolamilan-large.webp","/images/1773498871221-yg4vv6-img-2179-large.webp","/images/1773498879677-cby9ua-img-2181-large.webp","/images/1773498883632-nbaddr-img-2180-large.webp"]},{"id":260,"title":"Structuring the Point","year":2020,"medium":"Acrylic on cotton","dimensions":"100 x 100 cm","images":["/images/estructurando-el-punto-3-large.webp","/images/1773651399370-bybntm-img-2346-large.webp","/images/1773651402984-dlzhdu-img-2345-large.webp","/images/1773651405951-k7q9a8-img-2344-large.webp"]},{"id":193,"title":"My Garden","year":2024,"medium":"Mixed media on cotton","dimensions":"130 x 97 cm","images":["/images/mi-jardin-3-original.heic-large.webp","/images/1773601257021-xc3p8n-photo-output-3-large.webp","/images/1773601305987-sy61n9-img-2296-large.webp","/images/1773652393545-kg7uoa-img-2299-large.webp","/images/1773657729982-l1uenn-el-jardin-large.webp"]}];
+
+  window._lpPaintingsData = paintingsData;
+  window._lpCurrentPaintingIdx = 0;
+  window._lpCurrentImageIdx = 0;
+
+  window.openPaintingDetail = function(idx) {
+    const p = window._lpPaintingsData[idx];
+    if (!p || !p.images.length) return;
+    window._lpCurrentPaintingIdx = idx;
+    window._lpCurrentImageIdx = 0;
+
+    document.getElementById('paintingLightboxImg').src = p.images[0];
+    document.getElementById('paintingLightboxTitle').textContent = p.title;
+    const meta = [p.year, p.medium, p.dimensions].filter(Boolean).join(' · ');
+    document.getElementById('paintingLightboxMeta').textContent = meta;
+
+    // Render thumbnails
+    const thumbs = document.getElementById('paintingLightboxThumbs');
+    if (p.images.length > 1) {
+      thumbs.innerHTML = p.images.map((src, i) =>
+        `<img src="${src}" alt="" class="${i === 0 ? 'active' : ''}" onclick="switchPaintingImage(${i})" />`
+      ).join('');
+      thumbs.style.display = 'flex';
+    } else {
+      thumbs.innerHTML = '';
+      thumbs.style.display = 'none';
+    }
+
+    document.getElementById('paintingLightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.switchPaintingImage = function(imgIdx) {
+    const p = window._lpPaintingsData[window._lpCurrentPaintingIdx];
+    if (!p) return;
+    window._lpCurrentImageIdx = imgIdx;
+    document.getElementById('paintingLightboxImg').src = p.images[imgIdx];
+    document.querySelectorAll('#paintingLightboxThumbs img').forEach((el, i) => {
+      el.classList.toggle('active', i === imgIdx);
+    });
+  };
+
+  window.closePaintingDetail = function() {
+    document.getElementById('paintingLightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  window.inquireAboutPainting = function() {
+    const p = window._lpPaintingsData[window._lpCurrentPaintingIdx];
+    closePaintingDetail();
+    // Pre-select this painting in the inquiry wizard
+    if (window.openModal) openModal('available');
+    setTimeout(() => {
+      if (p) {
+        document.querySelectorAll('.lp-painting-select-item').forEach(el => {
+          el.classList.toggle('selected', el.dataset.paintingId === String(p.id));
+          const check = el.querySelector('.lp-check');
+          if (check) {
+            if (el.dataset.paintingId === String(p.id)) {
+              check.style.display = 'flex';
+            }
+          }
+        });
+      }
+    }, 100);
+  };
+
+  // Close on backdrop click or Escape
+  document.getElementById('paintingLightbox')?.addEventListener('click', function(e) {
+    if (e.target === this) closePaintingDetail();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('paintingLightbox')?.classList.contains('open')) {
+      closePaintingDetail();
+    }
+  });
+})();</script><section class="lp-highlights" data-section="3"> <div class="lp-highlight"> <div class="lp-highlight-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg></div> <h3 data-field="items[0].title">Personal process</h3> <p data-field="items[0].body">We talk about your space and the atmosphere you&#39;re looking for. I take care of the rest.</p> </div><div class="lp-highlight"> <div class="lp-highlight-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></div> <h3 data-field="items[1].title">Any format</h3> <p data-field="items[1].body">From 30 cm to large format. Acrylic and mixed media on canvas.</p> </div><div class="lp-highlight"> <div class="lp-highlight-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div> <h3 data-field="items[2].title">Professional shipping</h3> <p data-field="items[2].body">Specialised art packaging. Domestic and international delivery.</p> </div> </section><section class="lp-testimonials-carousel" data-section="4"> <div class="lp-carousel-header"> <h2 data-field="heading">What clients say</h2> <div class="lp-carousel-arrows"> <button class="lp-carousel-arrow" onclick="slideTestimonials(-1)" aria-label="Previous"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"></path></svg></button> <button class="lp-carousel-arrow" onclick="slideTestimonials(1)" aria-label="Next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"></path></svg></button> </div> </div> <div class="lp-carousel-track-wrapper"> <div class="lp-carousel-track" id="testimonialsTrack"> <div class="lp-testimonial-card"> <blockquote data-field="testimonials[0].quote">Paola understood exactly what we were looking for without us knowing how to explain it. The result exceeded everything we imagined.</blockquote> <div class="lp-testimonial-attribution"> <div class="lp-testimonial-author" data-field="testimonials[0].author">Ana &amp; Marcos</div> <div class="lp-testimonial-detail" data-field="testimonials[0].detail">Madrid</div> </div> </div><div class="lp-testimonial-card"> <blockquote data-field="testimonials[1].quote">Tener una obra creada especialmente para mi hogar es un lujo. Cada vez que la observo, descubro algo nuevo.</blockquote> <div class="lp-testimonial-attribution"> <div class="lp-testimonial-author" data-field="testimonials[1].author">Elena R.</div> <div class="lp-testimonial-detail" data-field="testimonials[1].detail">Valencia</div> </div> </div><div class="lp-testimonial-card"> <blockquote data-field="testimonials[2].quote">Our clients always ask about the painting. She captured the exact energy our space needed.</blockquote> <div class="lp-testimonial-attribution"> <div class="lp-testimonial-author" data-field="testimonials[2].author">Studio Arq</div> <div class="lp-testimonial-detail" data-field="testimonials[2].detail">Málaga</div> </div> </div><div class="lp-testimonial-card"> <blockquote data-field="testimonials[3].quote">It was a gift for my partner. She made us feel part of the creation without intruding on her artistic process.</blockquote> <div class="lp-testimonial-attribution"> <div class="lp-testimonial-author" data-field="testimonials[3].author">Lucía M</div> <div class="lp-testimonial-detail" data-field="testimonials[3].detail">Extremadura</div> </div> </div> </div> </div> </section><section class="lp-cta-bar" data-section="5"> <p data-field="text">Interested in a piece or looking for something specific for your space? Get in touch — no commitment.</p> <div class="lp-cta-bar-actions"> <button class="lp-btn" onclick="openModal()" data-campaign-cta data-field="cta_text">Get in touch</button> <a href="https://wa.me/34695323909" target="_blank" rel="noopener" class="lp-whatsapp-link"> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</a> </div> </section> <footer class="lp-footer"> <div class="lp-footer-links"> <a href="/privacy" data-ui-key="privacy_policy">Privacy policy</a> <a href="/cookies" data-ui-key="cookies">Cookies</a> <a href="/legal" data-ui-key="legal_notice">Legal notice</a> </div> <div class="lp-footer-language-selector" style="margin: 0.5rem 0; text-align: center;"> <label for="lp-language-select" style="font-size: 0.85rem; color: #888;" data-ui-key="language">Language</label> <span style="font-size: 0.85rem; color: #888;">: </span> <select id="lp-language-select" style="font-size: 0.85rem; padding: 0.2rem 0.4rem; border: 1px solid #ddd; border-radius: 3px; background: transparent; color: inherit;"> <option value="en">English</option><option value="es">Spanish</option> </select> </div> <p class="lp-footer-copy">&copy; 2026 Paola Milán. <span data-ui-key="all_rights_reserved">All rights reserved</span>.</p> </footer> <div class="lp-modal-backdrop" id="inquiryModal"> <div class="lp-modal"> <button class="lp-modal-close" onclick="closeModal()">&times;</button> <!-- Step 0: Choose path --> <div class="lp-modal-body lp-wizard-step active" data-step="choose"> <h2 data-ui-key="wizard_hello">Hello</h2> <p data-ui-key="wizard_intro">Tell me what you're interested in and I'll get back to you within 24 hours.</p> <div class="lp-choose-path"> <button class="lp-path-option" onclick="startPath('available')"> <div class="lp-path-option-icon"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg> </div> <div><h3 data-ui-key="wizard_existing_piece">I'm interested in an existing piece</h3><p data-ui-key="wizard_existing_piece_desc">I'd like to ask about an available painting</p></div> </button> <button class="lp-path-option" onclick="startPath('commission')"> <div class="lp-path-option-icon"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> </div> <div><h3 data-ui-key="wizard_custom_commission">I'd like a custom commission</h3><p data-ui-key="wizard_custom_commission_desc">I need a piece for a specific space</p></div> </button> <button class="lp-path-option" onclick="startPath('simple')"> <div class="lp-path-option-icon"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg> </div> <div><h3 data-ui-key="wizard_just_ask">I just want to ask something</h3><p data-ui-key="wizard_just_ask_desc">Send a message and I'll get back to you</p></div> </button> </div> <div class="lp-modal-whatsapp"> <span data-ui-key="wizard_or_reach_on">Or reach me on</span> <a href="https://wa.me/34695323909" target="_blank" rel="noopener"> <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</a> </div> </div> <!-- Available: Step 1 — Pick painting --> <div class="lp-modal-body lp-wizard-step" data-step="avail-1"> <div id="wizard-avail-header"> <div class="lp-wizard-progress"><span class="done"></span><span></span></div> <h2 data-ui-key="wizard_choose_artwork">Choose the artwork</h2> <p data-ui-key="wizard_choose_artwork_desc">Select the piece you're interested in. You can pick more than one.</p> </div> <div class="lp-painting-select"> <div class="lp-painting-select-item" data-painting-id="209" data-painting-title="Antonio"> <img src="/images/1772998151367-y0l6de-img-1750-medium.webp" alt="Antonio" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Antonio</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(0)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="205" data-painting-title="Diptych Blues"> <img src="/images/1773480766235-y1inbe-azul-insitu-medium.webp" alt="Diptych Blues" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Diptych Blues</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(1)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="211" data-painting-title="Loreto"> <img src="/images/1773498640436-7zci14-loreto-paolamilan-medium.webp" alt="Loreto" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Loreto</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(2)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="226" data-painting-title="Malta"> <img src="/images/1765976986929-6wov52-img-6037-medium.webp" alt="Malta" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Malta</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(3)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="208" data-painting-title="Mela"> <img src="/images/1773925651669-sc2re3-img-2529-medium.webp" alt="Mela" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Mela</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(4)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="234" data-painting-title="My Beautiful Chaos"> <img src="/images/1769891177902-djbi7f-af791a05-195d-42b7-8cfa-17c02547d67f-medium.webp" alt="My Beautiful Chaos" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">My Beautiful Chaos</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(5)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="193" data-painting-title="My Garden"> <img src="/images/mi-jardin-3-original.heic-medium.webp" alt="My Garden" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">My Garden</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(6)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="243" data-painting-title="Paradise"> <img src="/images/1768506671780-bduv7n-4b395582-4db7-45a4-be22-e7fe6bf2be00-medium.webp" alt="Paradise" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Paradise</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(7)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="194" data-painting-title="Pink Desert"> <img src="/images/1773513702384-944c23-photo-output-2-medium.webp" alt="Pink Desert" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Pink Desert</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(8)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="212" data-painting-title="Present"> <img src="/images/1772018933020-gnv69i-paolamilan-w6-medium.webp" alt="Present" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Present</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(9)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="202" data-painting-title="Sapphire"> <img src="/images/zafiro-1-medium.webp" alt="Sapphire" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Sapphire</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(10)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="260" data-painting-title="Structuring the Point"> <img src="/images/estructurando-el-punto-3-medium.webp" alt="Structuring the Point" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Structuring the Point</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(11)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="230" data-painting-title="The Dream in the Fields"> <img src="/images/1765979756586-pz3ktj-img-6051-medium.webp" alt="The Dream in the Fields" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">The Dream in the Fields</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(12)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="265" data-painting-title="Those Moments with Them"> <img src="/images/1774018450866-6knp8r-img-2635-medium.webp" alt="Those Moments with Them" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Those Moments with Them</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(13)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="238" data-painting-title="Universe"> <img src="/images/universo-1-medium.webp" alt="Universe" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Universe</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(14)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="204" data-painting-title="Victor"> <img src="/images/1773668367685-3n12mc-img-2430-medium.webp" alt="Victor" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Victor</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(15)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div><div class="lp-painting-select-item" data-painting-id="224" data-painting-title="Whispering Angels"> <img src="/images/1771431828834-2vl0r6-paolamilan-angels3-medium.webp" alt="Whispering Angels" onclick="toggleSelect(this.parentElement)"> <div class="lp-painting-select-label">Whispering Angels</div> <div class="lp-check">&#10003;</div> <button class="lp-painting-zoom" onclick="showWizardPaintingDetail(16)" title="View detail"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg> </button> </div> </div> <!-- Inline painting detail (replaces grid when viewing) --> <div id="wizard-painting-detail" style="display:none;"> <div style="margin-bottom:0.75rem;"> <button class="lp-btn lp-btn-ghost" onclick="hideWizardPaintingDetail()" style="font-size:0.8rem;padding:0.25rem 0.5rem;" data-ui-key="wizard_back_to_selection">&larr; Back to selection</button> </div> <div id="wizard-detail-main" style="margin-bottom:0.5rem;"> <img id="wizard-detail-img" src="" alt="" style="width:100%;border-radius:4px;"> </div> <div id="wizard-detail-thumbs" style="display:flex;gap:0.35rem;overflow-x:auto;margin-bottom:0.75rem;"></div> <div style="display:flex;justify-content:space-between;align-items:center;"> <div> <h3 id="wizard-detail-title" style="font-size:0.95rem;font-weight:400;text-transform:uppercase;letter-spacing:0.04em;margin:0;"></h3> <p id="wizard-detail-meta" style="font-size:0.8rem;color:#888;margin:0.15rem 0 0;"></p> </div> <button id="wizard-detail-select-btn" class="lp-btn" style="font-size:0.8rem;padding:0.4rem 0.8rem;" onclick="toggleSelectFromDetail()">Select</button> </div> </div> <div class="lp-wizard-nav" id="wizard-avail-nav"> <button class="lp-btn lp-btn-ghost" onclick="goStep('choose')" data-ui-key="wizard_back">Back</button> <button class="lp-btn" onclick="goStep('avail-2')" data-ui-key="wizard_next">Next</button> </div> </div> <!-- Available: Step 2 — Contact --> <div class="lp-modal-body lp-wizard-step" data-step="avail-2"> <div class="lp-wizard-progress"><span class="done"></span><span class="done"></span></div> <h2 data-ui-key="wizard_your_details">Your details</h2> <p data-ui-key="wizard_details_desc_avail">So I can get back to you with all the information.</p> <form id="wizard-avail-form"> <div class="lp-form-row"> <div class="lp-form-group"><label for="avail-name" data-ui-key="wizard_name">Name</label><input type="text" id="avail-name" name="name" required placeholder="Your name"></div> <div class="lp-form-group"><label for="avail-email" data-ui-key="wizard_email">Email</label><input type="email" id="avail-email" name="email" required placeholder="you@email.com"></div> </div> <div class="lp-form-group"><label for="avail-phone"><span data-ui-key="wizard_phone">Phone</span> <span style="color:#ccc">(<span data-ui-key="wizard_optional">optional</span>)</span></label><input type="tel" id="avail-phone" name="phone" placeholder="+34 ..."></div> <div class="lp-form-group"><label for="avail-msg"><span data-ui-key="wizard_message">Message</span> <span style="color:#ccc">(<span data-ui-key="wizard_optional">optional</span>)</span></label><textarea id="avail-msg" name="message" placeholder="Where will the piece go? Any specific questions?"></textarea></div> <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off"> </form> <div class="lp-wizard-nav"> <button class="lp-btn lp-btn-ghost" onclick="goStep('avail-1')" data-ui-key="wizard_back">Back</button> <button class="lp-btn" onclick="submitWizard('avail')" data-ui-key="wizard_send_inquiry">Send inquiry</button> </div> </div> <!-- Commission: Step 1 — Space --> <div class="lp-modal-body lp-wizard-step" data-step="comm-1"> <div class="lp-wizard-progress"><span class="done"></span><span></span></div> <h2 data-ui-key="wizard_tell_about_space">Tell me about the space</h2> <p data-ui-key="wizard_space_desc">This helps me understand what kind of piece would work.</p> <div class="lp-form-group"><label for="comm-space" data-ui-key="wizard_space_type">Type of space</label> <select id="comm-space"><option value="">Select...</option><option>Living room</option><option>Bedroom</option><option>Office / study</option><option>Commercial space</option><option>Restaurant / hotel</option><option>Other</option></select> </div> <div class="lp-form-row"> <div class="lp-form-group"><label for="comm-size" data-ui-key="wizard_size">Approximate size</label><select id="comm-size"><option value="">Select...</option><option>Small (up to 60 cm)</option><option>Medium (60–100 cm)</option><option>Large (100–150 cm)</option><option>Very large (150+ cm)</option><option>Not sure yet</option></select></div> <div class="lp-form-group"><label for="comm-when" data-ui-key="wizard_timeline">Timeline</label><select id="comm-when"><option value="">Select...</option><option>No rush</option><option>1–2 months</option><option>3–6 months</option><option>Just exploring</option></select></div> </div> <div class="lp-form-group"><label for="comm-feel" data-ui-key="wizard_atmosphere">Atmosphere / feeling</label><textarea id="comm-feel" placeholder="What are you looking for? Calm, energy, colour, something neutral..."></textarea><div class="lp-form-hint" data-ui-key="wizard_atmosphere_hint">You don't need to know about art. Any impression helps.</div></div> <div class="lp-wizard-nav"> <button class="lp-btn lp-btn-ghost" onclick="goStep('choose')" data-ui-key="wizard_back">Back</button> <button class="lp-btn" onclick="goStep('comm-2')" data-ui-key="wizard_next">Next</button> </div> </div> <!-- Commission: Step 2 — Contact --> <div class="lp-modal-body lp-wizard-step" data-step="comm-2"> <div class="lp-wizard-progress"><span class="done"></span><span class="done"></span></div> <h2 data-ui-key="wizard_your_details">Your details</h2> <p data-ui-key="wizard_details_desc_comm">I'll send you a personalised proposal — no commitment.</p> <form id="wizard-comm-form"> <div class="lp-form-row"> <div class="lp-form-group"><label for="comm-name" data-ui-key="wizard_name">Name</label><input type="text" id="comm-name" name="name" required placeholder="Your name"></div> <div class="lp-form-group"><label for="comm-email" data-ui-key="wizard_email">Email</label><input type="email" id="comm-email" name="email" required placeholder="you@email.com"></div> </div> <div class="lp-form-group"><label for="comm-phone"><span data-ui-key="wizard_phone">Phone</span> <span style="color:#ccc">(<span data-ui-key="wizard_optional">optional</span>)</span></label><input type="tel" id="comm-phone" name="phone" placeholder="+34 ..."></div> <div class="lp-form-group"><label for="comm-extra" data-ui-key="wizard_anything_else">Anything else you'd like to share</label><textarea id="comm-extra" name="extra" placeholder="Photos of the space, references, rough budget..."></textarea></div> <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off"> </form> <div class="lp-wizard-nav"> <button class="lp-btn lp-btn-ghost" onclick="goStep('comm-1')" data-ui-key="wizard_back">Back</button> <button class="lp-btn" onclick="submitWizard('commission')" data-ui-key="wizard_send_inquiry">Send inquiry</button> </div> </div> <!-- Simple Contact --> <div class="lp-modal-body lp-wizard-step" data-step="simple"> <h2 data-ui-key="wizard_write_to_me">Write to me</h2> <p data-ui-key="wizard_reply_within">I'll reply within 24 hours.</p> <form id="wizard-simple-form"> <div class="lp-form-row"> <div class="lp-form-group"><label for="simple-name" data-ui-key="wizard_name">Name</label><input type="text" id="simple-name" name="name" required placeholder="Your name"></div> <div class="lp-form-group"><label for="simple-email" data-ui-key="wizard_email">Email</label><input type="email" id="simple-email" name="email" required placeholder="you@email.com"></div> </div> <div class="lp-form-group"><label for="simple-msg" data-ui-key="wizard_message">Message</label><textarea id="simple-msg" name="message" required placeholder="Tell me what you need..."></textarea></div> <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off"> </form> <div class="lp-wizard-nav"> <button class="lp-btn lp-btn-ghost" onclick="goStep('choose')" data-ui-key="wizard_back">Back</button> <button class="lp-btn" onclick="submitWizard('simple')" data-ui-key="wizard_send">Send</button> </div> </div> <!-- Success --> <div class="lp-modal-body lp-wizard-step" data-step="success"> <div class="lp-success-msg active"> <div class="lp-success-icon">&#10003;</div> <h3 data-ui-key="wizard_message_sent">Message sent</h3> <p data-ui-key="wizard_success_text">Thanks for reaching out. I'll get back to you within 24 hours.</p> <br> <button class="lp-btn" onclick="closeModal()" data-ui-key="wizard_close">Close</button> </div> </div> </div> </div> <script>(function(){const campaignSlug = null;
+const paintingsDetailData = [{"id":209,"title":"Antonio","year":2025,"medium":"Mixed media on linen","dimensions":"130 x 97 cm","images":["/images/1772998151367-y0l6de-img-1750-large.webp","/images/1772998154112-0khfih-img-1751-large.webp","/images/1773134819625-7q2mml-img-1780-large.webp","/images/1773134986554-34wf3r-paola-antonio-large.webp","/images/1773134989727-eiob5s-paola-antonio2-large.webp","/images/1773135905110-ux38rw-img-1856-large.webp"],"thumb":"/images/1772998151367-y0l6de-img-1750-medium.webp"},{"id":205,"title":"Diptych Blues","year":2023,"medium":"Cotton canvases","dimensions":"194 x 130 cm","images":["/images/1773480766235-y1inbe-azul-insitu-large.webp","/images/1773480772293-jwi7d7-diptico-azul-ok-large.webp","/images/1773480823250-or1b5k-photo-output-2-large.webp","/images/1773480827242-h35zxi-photo-output-3-large.webp","/images/1773751904090-yo3fya-img-2192-large.webp","/images/1773751916237-8c4ls3-img-2353-large.webp","/images/1773751974404-pjic7y-img-2459-large.webp","/images/1773752002440-lkivsf-img-2455-large.webp","/images/1773752367259-s3nja8-photo-output-0-large.webp","/images/1773752372694-vq4apn-photo-output-1-large.webp","/images/1773752377518-evz50h-img-2065-large.webp","/images/1773752446552-dcxhcv-img-2068-large.webp","/images/1773752450732-xtwxe8-img-2067-large.webp"],"thumb":"/images/1773480766235-y1inbe-azul-insitu-medium.webp"},{"id":211,"title":"Loreto","year":2024,"medium":"Mixed media on cotton","dimensions":"120 x 120 cm","images":["/images/1773498640436-7zci14-loreto-paolamilan-large.webp","/images/1773498871221-yg4vv6-img-2179-large.webp","/images/1773498879677-cby9ua-img-2181-large.webp","/images/1773498883632-nbaddr-img-2180-large.webp"],"thumb":"/images/1773498640436-7zci14-loreto-paolamilan-medium.webp"},{"id":226,"title":"Malta","year":2025,"medium":"Acrylics on cotton","dimensions":"100 x 81 / 100 x 100 cm","images":["/images/1765976986929-6wov52-img-6037-large.webp","/images/1766346784945-zmw6e8-img-6232-large.webp","/images/1766346790884-1bdvuq-img-6233-large.webp","/images/1773132721450-70i5yg-photo-output-2-large.webp","/images/1773136760673-icicnp-img-1857-large.webp","/images/1773136769477-nwxeyg-img-1859-large.webp"],"thumb":"/images/1765976986929-6wov52-img-6037-medium.webp"},{"id":208,"title":"Mela","year":2023,"medium":"Mixed media on linen","dimensions":"130 x 97 cm","images":["/images/1773925651669-sc2re3-img-2529-large.webp","/images/1773925654632-608dq2-img-2535-large.webp"],"thumb":"/images/1773925651669-sc2re3-img-2529-medium.webp"},{"id":234,"title":"My Beautiful Chaos","year":2026,"medium":"Mixed media","dimensions":"92 x 73 cm","images":["/images/1769891177902-djbi7f-af791a05-195d-42b7-8cfa-17c02547d67f-large.webp","/images/1769891201438-xsqwup-photo-output-8-large.webp","/images/1773309234137-5s6b7c-photo-output-5-large.webp","/images/1773309249719-c5t7yy-photo-output-6-large.webp"],"thumb":"/images/1769891177902-djbi7f-af791a05-195d-42b7-8cfa-17c02547d67f-medium.webp"},{"id":193,"title":"My Garden","year":2024,"medium":"Mixed media on cotton","dimensions":"130 x 97 cm","images":["/images/mi-jardin-3-original.heic-large.webp","/images/1773601257021-xc3p8n-photo-output-3-large.webp","/images/1773601305987-sy61n9-img-2296-large.webp","/images/1773652393545-kg7uoa-img-2299-large.webp","/images/1773657729982-l1uenn-el-jardin-large.webp"],"thumb":"/images/mi-jardin-3-original.heic-medium.webp"},{"id":243,"title":"Paradise","year":2026,"medium":"Mixed media","dimensions":"140 x 110 cm","images":["/images/1768506671780-bduv7n-4b395582-4db7-45a4-be22-e7fe6bf2be00-large.webp","/images/1768506673891-l1dftz-4d1746b2-594f-40b6-852f-33a21c7a1a0b-large.webp","/images/1769079741670-q7y2iv-photo-output-large.webp","/images/1769079797864-gbu45u-paradise-large.webp","/images/1773497579899-qsgzt2-paradise-paolamilan-large.webp"],"thumb":"/images/1768506671780-bduv7n-4b395582-4db7-45a4-be22-e7fe6bf2be00-medium.webp"},{"id":194,"title":"Pink Desert","year":2025,"medium":"Mixed media on linen","dimensions":"130 x 97 cm","images":["/images/1773513702384-944c23-photo-output-2-large.webp","/images/1773513708980-ybjd8t-img-2215-large.webp","/images/1773513720712-gd32sh-img-2213-large.webp"],"thumb":"/images/1773513702384-944c23-photo-output-2-medium.webp"},{"id":212,"title":"Present","year":2026,"medium":"Mixed media","dimensions":"92 x 73 cm","images":["/images/1772018933020-gnv69i-paolamilan-w6-large.webp","/images/1772019392032-aq5oop-paolamilan-present-w-large.webp","/images/1773480423985-tjt7l4-paolamilan-present-large.webp"],"thumb":"/images/1772018933020-gnv69i-paolamilan-w6-medium.webp"},{"id":202,"title":"Sapphire","year":2020,"medium":"Acrylics on cotton","dimensions":"100 x 81 cm","images":["/images/zafiro-1-large.webp","/images/zafiro-2-large.webp","/images/zafiro-4-large.webp","/images/zafiro-5-large.webp","/images/zafiro-6-large.webp"],"thumb":"/images/zafiro-1-medium.webp"},{"id":260,"title":"Structuring the Point","year":2020,"medium":"Acrylic on cotton","dimensions":"100 x 100 cm","images":["/images/estructurando-el-punto-3-large.webp","/images/1773651399370-bybntm-img-2346-large.webp","/images/1773651402984-dlzhdu-img-2345-large.webp","/images/1773651405951-k7q9a8-img-2344-large.webp"],"thumb":"/images/estructurando-el-punto-3-medium.webp"},{"id":230,"title":"The Dream in the Fields","year":2024,"medium":"Mixed media on cotton","dimensions":"92 x 73 cm","images":["/images/1765979756586-pz3ktj-img-6051-large.webp","/images/1765979764311-bur4zm-img-6049-large.webp","/images/1771264564024-5gj0p0-paola-milan-amarillo-large.webp","/images/1771264568886-b6q6cq-paola-milan-amarillo2-large.webp","/images/1771264574890-otkn3q-paola-milan-amarillo3-large.webp"],"thumb":"/images/1765979756586-pz3ktj-img-6051-medium.webp"},{"id":265,"title":"Those Moments with Them","year":2026,"medium":"Mixed media on linen","dimensions":"65 x 55 cm","images":["/images/1774018450866-6knp8r-img-2635-large.webp","/images/1774018467806-jx5dsa-img-2637-large.webp","/images/1774018472549-ci6anz-photo-output-large.webp","/images/1774018598719-nb2x7f-img-2666-large.webp"],"thumb":"/images/1774018450866-6knp8r-img-2635-medium.webp"},{"id":238,"title":"Universe","year":2020,"medium":"Mixed media on cotton","dimensions":"100 x 100 cm","images":["/images/universo-1-large.webp","/images/universo-2-large.webp","/images/universo-3-large.webp"],"thumb":"/images/universo-1-medium.webp"},{"id":204,"title":"Victor","year":2023,"medium":"Mixed media on linen","dimensions":"130 x 97 cm","images":["/images/1773668367685-3n12mc-img-2430-large.webp","/images/1773668374942-ro2l67-img-2431-large.webp","/images/1773668383005-yhwhv1-img-2434-large.webp","/images/1773668549013-iz4yll-victor-paola-milan-large.webp","/images/1773669084053-pfa1bl-img-2436-large.webp"],"thumb":"/images/1773668367685-3n12mc-img-2430-medium.webp"},{"id":224,"title":"Whispering Angels","year":2025,"medium":"Mixed media","dimensions":"70 × 160 cm","images":["/images/1771431828834-2vl0r6-paolamilan-angels3-large.webp","/images/1771431837943-bdb5se-paolamilan-ok-signature-large.webp","/images/1771432906950-1h24f8-photo-output-6-large.webp","/images/1771432957890-w2woek-photo-output-5-large.webp","/images/1773151794378-h22c1d-paola-dimensiones-ig-large.webp","/images/1773151817690-t6do3e-paola-dimensiones-ig-large.webp"],"thumb":"/images/1771431828834-2vl0r6-paolamilan-angels3-medium.webp"}];
+
+  // Painting detail data for wizard
+  window._wizardPaintings = paintingsDetailData;
+  window._wizardDetailIdx = 0;
+  window._wizardDetailImgIdx = 0;
+
+  // Modal
+  function openModal(path) {
+    document.getElementById('inquiryModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (path === 'available') startPath('available');
+    else if (path === 'commission') startPath('commission');
+    else goStep('choose');
+  }
+  window.openModal = openModal;
+
+  function closeModal() {
+    const detail = document.getElementById('wizard-painting-detail');
+    if (detail && detail.style.display !== 'none') { hideWizardPaintingDetail(); return; }
+    document.getElementById('inquiryModal').classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => goStep('choose'), 300);
+  }
+  window.closeModal = closeModal;
+
+  document.getElementById('inquiryModal').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('inquiryModal')) closeModal();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  // Wizard
+  function goStep(name) {
+    document.querySelectorAll('.lp-wizard-step').forEach(el => el.classList.remove('active'));
+    const target = document.querySelector(`[data-step="${name}"]`);
+    if (target) target.classList.add('active');
+    document.querySelector('.lp-modal').scrollTop = 0;
+  }
+  window.goStep = goStep;
+
+  function startPath(path) {
+    if (path === 'available') goStep('avail-1');
+    else if (path === 'commission') goStep('comm-1');
+    else if (path === 'simple') goStep('simple');
+  }
+  window.startPath = startPath;
+
+  function toggleSelect(el) { el.classList.toggle('selected'); }
+  window.toggleSelect = toggleSelect;
+
+  // Helper to read translated UI string
+  function _t(key, fallback) {
+    const translations = window.__lpUiTranslations;
+    if (!translations) return fallback || '';
+    const lang = window.__lpActiveLang || Object.keys(translations)[0];
+    return (translations[lang] && translations[lang][key]) || fallback || '';
+  }
+
+  // Wizard painting detail view
+  function showWizardPaintingDetail(idx) {
+    const p = window._wizardPaintings[idx];
+    if (!p || !p.images.length) return;
+    window._wizardDetailIdx = idx;
+    window._wizardDetailImgIdx = 0;
+
+    const detail = document.getElementById('wizard-painting-detail');
+    const grid = document.querySelector('#inquiryModal .lp-painting-select');
+    const nav = document.getElementById('wizard-avail-nav');
+
+    document.getElementById('wizard-detail-img').src = p.images[0];
+    document.getElementById('wizard-detail-title').textContent = p.title;
+    document.getElementById('wizard-detail-meta').textContent = [p.year, p.medium, p.dimensions].filter(Boolean).join(' · ');
+
+    // Thumbnails
+    const thumbs = document.getElementById('wizard-detail-thumbs');
+    if (p.images.length > 1) {
+      thumbs.innerHTML = p.images.map((src, i) =>
+        `<img src="${src}" alt="" class="${i === 0 ? 'active' : ''}" onclick="switchWizardDetailImg(${i})" style="width:48px;height:48px;object-fit:cover;border-radius:3px;cursor:pointer;border:2px solid ${i === 0 ? '#1a1a1a' : 'transparent'};opacity:${i === 0 ? '1' : '0.6'};transition:all 0.2s;" />`
+      ).join('');
+      thumbs.style.display = 'flex';
+    } else {
+      thumbs.innerHTML = '';
+      thumbs.style.display = 'none';
+    }
+
+    // Update select button state
+    updateDetailSelectBtn(p.id);
+
+    detail.style.display = 'block';
+    const header = document.getElementById('wizard-avail-header');
+    if (header) header.style.display = 'none';
+    if (grid) grid.style.display = 'none';
+    if (nav) nav.style.display = 'none';
+  }
+  window.showWizardPaintingDetail = showWizardPaintingDetail;
+
+  function hideWizardPaintingDetail() {
+    document.getElementById('wizard-painting-detail').style.display = 'none';
+    const header = document.getElementById('wizard-avail-header');
+    const grid = document.querySelector('#inquiryModal .lp-painting-select');
+    const nav = document.getElementById('wizard-avail-nav');
+    if (header) header.style.display = '';
+    if (grid) grid.style.display = 'grid';
+    if (nav) nav.style.display = 'flex';
+  }
+  window.hideWizardPaintingDetail = hideWizardPaintingDetail;
+
+  function switchWizardDetailImg(imgIdx) {
+    const p = window._wizardPaintings[window._wizardDetailIdx];
+    if (!p) return;
+    window._wizardDetailImgIdx = imgIdx;
+    document.getElementById('wizard-detail-img').src = p.images[imgIdx];
+    document.querySelectorAll('#wizard-detail-thumbs img').forEach((el, i) => {
+      el.style.borderColor = i === imgIdx ? '#1a1a1a' : 'transparent';
+      el.style.opacity = i === imgIdx ? '1' : '0.6';
+      el.classList.toggle('active', i === imgIdx);
+    });
+  }
+  window.switchWizardDetailImg = switchWizardDetailImg;
+
+  function toggleSelectFromDetail() {
+    const p = window._wizardPaintings[window._wizardDetailIdx];
+    if (!p) return;
+    const item = document.querySelector(`.lp-painting-select-item[data-painting-id="${p.id}"]`);
+    if (item) toggleSelect(item);
+    updateDetailSelectBtn(p.id);
+  }
+  window.toggleSelectFromDetail = toggleSelectFromDetail;
+
+  function updateDetailSelectBtn(paintingId) {
+    const item = document.querySelector(`.lp-painting-select-item[data-painting-id="${paintingId}"]`);
+    const btn = document.getElementById('wizard-detail-select-btn');
+    if (!btn) return;
+    const isSelected = item?.classList.contains('selected');
+    btn.textContent = isSelected ? _t('wizard_selected', 'Selected ✓') : _t('wizard_select_piece', 'Select this piece');
+    btn.style.background = isSelected ? '#1a1a1a' : '';
+  }
+
+  // Form submission
+  async function submitWizard(type) {
+    let name, email, message, inquiryType, paintingReference;
+
+    if (type === 'avail') {
+      name = document.getElementById('avail-name').value.trim();
+      email = document.getElementById('avail-email').value.trim();
+      message = document.getElementById('avail-msg').value.trim();
+      inquiryType = 'purchase';
+      const selected = document.querySelectorAll('.lp-painting-select-item.selected');
+      paintingReference = Array.from(selected).map(el => el.dataset.paintingTitle).join(', ');
+      const honeypot = document.querySelector('#wizard-avail-form [name="website"]');
+      if (honeypot && honeypot.value) return;
+    } else if (type === 'commission') {
+      name = document.getElementById('comm-name').value.trim();
+      email = document.getElementById('comm-email').value.trim();
+      const space = document.getElementById('comm-space').value;
+      const size = document.getElementById('comm-size').value;
+      const timeline = document.getElementById('comm-when').value;
+      const feel = document.getElementById('comm-feel').value.trim();
+      const extra = document.getElementById('comm-extra').value.trim();
+      message = `Space: ${space}\nSize: ${size}\nTimeline: ${timeline}\nAtmosphere: ${feel}\n\n${extra}`;
+      inquiryType = 'commission';
+      const honeypot = document.querySelector('#wizard-comm-form [name="website"]');
+      if (honeypot && honeypot.value) return;
+    } else {
+      name = document.getElementById('simple-name').value.trim();
+      email = document.getElementById('simple-email').value.trim();
+      message = document.getElementById('simple-msg').value.trim();
+      inquiryType = 'general';
+      const honeypot = document.querySelector('#wizard-simple-form [name="website"]');
+      if (honeypot && honeypot.value) return;
+    }
+
+    if (!name || !email) return;
+    if (!message && type !== 'avail') return;
+
+    const body = {
+      name, email, message: message || 'Inquiry via landing page',
+      inquiry_type: inquiryType,
+      painting_reference: paintingReference || ''
+    };
+
+    // Add language for localized auto-reply
+    body.language = window.__lpActiveLang || '';
+
+    // Add campaign attribution from sessionStorage
+    const storedCampaign = campaignSlug || sessionStorage.getItem('campaign_slug');
+    if (storedCampaign) body.campaign_slug = storedCampaign;
+    const storedChannel = sessionStorage.getItem('campaign_channel');
+    if (storedChannel) body.campaign_channel = storedChannel;
+
+    try {
+      const formEndpoint = document.body.dataset.formEndpoint || '';
+      const url = formEndpoint ? `${formEndpoint}/api/inquiries/submit` : '/api/inquiries/submit';
+      await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+    } catch (e) {}
+
+    goStep('success');
+
+    // Track campaign event
+    if (storedCampaign) {
+      try {
+        const apiBase2 = (document.body.dataset.formEndpoint || '').replace(/\/$/, '');
+        fetch(apiBase2 + '/api/campaign-event', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ campaign: storedCampaign, channel: sessionStorage.getItem('campaign_channel') || '', event: 'inquiry_submit' })
+        }).catch(() => {});
+      } catch (e) {}
+    }
+  }
+  window.submitWizard = submitWizard;
+})();</script> <script>(function(){const defaultLang = "en";
+const allSectionTranslations = {"es":{"0":{"heading":"ARTE CONTEMPORANEO ORIGINAL","subheading":"Obras disponibles y piezas por encargo para espacios con carácter."},"1":{"left_body":"La mayoría de mis pinturas están terminadas. Son piezas únicas, nacidas de la intuición y la experimentación con el color, listas para integrarse en tu espacio.","left_cta_text":"Explora y consulta","left_heading":"Elige una obra","left_label":"Obras disponibles","right_body":"Un proceso artístico personalizado para crear una obra diseñada exclusivamente para tu espacio. No se trata de elegir colores: se trata de crear algo auténtico y genuino.","right_cta_text":"Consulta sobre un encargo","right_heading":"Crea algo único","right_label":"Obra por encargo"},"2":{"heading":"Obras disponibles"},"3":{"items[0].body":"Conversamos sobre tu espacio y la energía que quieres transmitir. Yo me encargo de todo lo demás.","items[0].title":"Proceso creativo personalizado","items[1].body":"Desde 30 cm hasta gran formato. Acrílico y técnicas mixtas sobre lienzo.","items[1].title":"Cualquier formato","items[2].body":"Envíos y entregas nacionales e internacionales.","items[2].title":"Envío especializado"},"4":{"heading":"Lo que dicen los clientes","testimonials[0].author":"Ana & Marcos","testimonials[0].detail":"Madrid","testimonials[0].quote":"Paola entendió exactamente lo que buscábamos, incluso antes de que pudiéramos explicarlo. El resultado superó todo lo que imaginábamos.","testimonials[1].author":"Elena R. ","testimonials[1].detail":"Valencia","testimonials[2].author":"Estudio Arq","testimonials[2].detail":"Málaga","testimonials[2].quote":"Capturó exactamente la energía que nuestro espacio necesitaba” mantiene el matiz artístico y aspiracional.","testimonials[3].author":"Lucía M","testimonials[3].detail":"Extremadura","testimonials[3].quote":"Fue un regalo para mi pareja. Nos hizo sentir parte del proceso de creación, sin interferir en su proceso artístico."},"5":{"cta_text":"Hablemos — sin compromiso","text":"Descubre la obra perfecta o encarga una pieza diseñada exclusivamente para tu espacio. "}}};
+const allUiTranslations = {"en":{"home":"Home","collections":"Collections","other_collections":"Other Collections","contact":"Contact","instagram":"Instagram","language":"Language","all_rights_reserved":"All rights reserved","no_collections":"No collections yet. Add some through the admin panel!","no_paintings":"No paintings in this collection yet.","back_to_collections":"Back to Collections","year":"Year","medium":"Medium","dimensions":"Dimensions","paintings":"paintings","explore_curated_selections":"Explore curated selections of artwork","curated_selections":"Curated selections of artwork organized by theme and style","no_collections_available":"No collections available yet.","about_artist":"About the Artist","back_to":"Back to","inquiry_form_title":"Send an Inquiry","inquiry_name":"Name","inquiry_email":"Email","inquiry_type":"Inquiry Type","inquiry_type_purchase":"Purchase","inquiry_type_commission":"Commission","inquiry_type_general":"General","inquiry_regarding":"Regarding","inquiry_message":"Message","inquiry_submit":"Send Inquiry","inquiry_success":"Thank you! Your inquiry has been sent successfully.","inquiry_error":"Something went wrong. Please try again or contact us directly.","wizard_hello":"Hello","wizard_intro":"Tell me what you're interested in and I'll get back to you within 24 hours.","wizard_existing_piece":"I'm interested in an existing piece","wizard_custom_commission":"I'd like a custom commission","wizard_just_ask":"I just want to ask something","wizard_choose_artwork":"Choose the artwork","wizard_your_details":"Your details","wizard_message_sent":"Message sent","wizard_success_text":"Thanks for reaching out. I'll get back to you within 24 hours.","wizard_existing_piece_desc":"I'd like to ask about an available painting","wizard_custom_commission_desc":"I need a piece for a specific space","wizard_just_ask_desc":"Send a message and I'll get back to you","wizard_or_reach_on":"Or reach me on","wizard_choose_artwork_desc":"Select the piece you're interested in. You can pick more than one.","wizard_details_desc_avail":"So I can get back to you with all the information.","wizard_details_desc_comm":"I'll send you a personalised proposal — no commitment.","wizard_name":"Name","wizard_email":"Email","wizard_phone":"Phone","wizard_optional":"optional","wizard_message":"Message","wizard_send_inquiry":"Send inquiry","wizard_send":"Send","wizard_back":"Back","wizard_next":"Next","wizard_close":"Close","wizard_back_to_selection":"Back to selection","wizard_select_piece":"Select this piece","wizard_selected":"Selected ✓","wizard_tell_about_space":"Tell me about the space","wizard_space_desc":"This helps me understand what kind of piece would work.","wizard_space_type":"Type of space","wizard_size":"Approximate size","wizard_timeline":"Timeline","wizard_atmosphere":"Atmosphere / feeling","wizard_atmosphere_hint":"You don't need to know about art. Any impression helps.","wizard_anything_else":"Anything else you'd like to share","wizard_write_to_me":"Write to me","wizard_reply_within":"I'll reply within 24 hours.","wizard_inquire_piece":"Inquire about this piece","privacy_policy":"Privacy policy","cookies":"Cookies","legal_notice":"Legal notice"},"es":{"home":"Inicio","collections":"Colecciones","other_collections":"Otras colecciones","contact":"Contacto","instagram":"Instagram","language":"Idioma","all_rights_reserved":"Todos los derechos reservados","no_collections":"Aún no hay colecciones. ¡Agrega algunas desde el panel de administración!","no_paintings":"Aún no hay pinturas en esta colección.","back_to_collections":"Volver a colecciones","year":"Año","medium":"Técnica","dimensions":"Medidas","paintings":"Pinturas","explore_curated_selections":"Descubre nuestras selecciones de obras de arte","curated_selections":"Selecciones de obras curadas, organizadas por tema y estilo","no_collections_available":"Aún no hay colecciones disponibles","about_artist":"Sobre la artista","back_to":"Volver a","inquiry_form_title":"Enviar consulta personalizada","inquiry_name":"Nombre","inquiry_email":"Correo electrónico","inquiry_type":"Tipo de consulta","inquiry_type_purchase":"Comprar obra","inquiry_type_commission":"Encargo","inquiry_type_general":"Consulta general","inquiry_regarding":"Respecto a…","inquiry_message":"Mensaje","inquiry_submit":"Enviar consulta","inquiry_success":"¡Gracias! Hemos recibido tu consulta y te responderemos personalmente en 24–48 horas.","inquiry_error":"Lo sentimos, ha ocurrido un error. Por favor, inténtalo de nuevo o ponte en contacto con nosotros directamente.","wizard_hello":"Hola","wizard_intro":"Cuéntame qué te interesa y te responderé en menos de 24 horas.","wizard_existing_piece":"Me interesa una obra disponible","wizard_custom_commission":"Me gustaría encargar una obra personalizada","wizard_just_ask":"Solo quiero hacer una consulta","wizard_choose_artwork":"Elige la obra","wizard_your_details":"Tus datos","wizard_message_sent":"Mensaje enviado","wizard_success_text":"Gracias por escribir. Te responderé en menos de 24 horas.","wizard_existing_piece_desc":"Quisiera preguntar sobre una pintura disponible","wizard_custom_commission_desc":"Necesito una obra para un espacio específico","wizard_just_ask_desc":"Envía un mensaje y te responderé","wizard_or_reach_on":"O contáctame en","wizard_choose_artwork_desc":"Selecciona la obra que te interesa. Puedes escoger más de una.","wizard_details_desc_avail":"Para poder responderte con toda la información.","wizard_details_desc_comm":"Te enviaré una propuesta personalizada — sin compromiso.","wizard_name":"Nombre","wizard_email":"Correo electrónico","wizard_phone":"Teléfono","wizard_optional":"opcional","wizard_message":"Mensaje","wizard_send_inquiry":"Enviar consulta","wizard_send":"Enviar","wizard_back":"Atrás","wizard_next":"Siguiente","wizard_close":"Cerrar","wizard_back_to_selection":"Volver a la selección","wizard_select_piece":"Seleccionar esta obra","wizard_selected":"Seleccionada ✓","wizard_tell_about_space":"Cuéntame sobre el espacio","wizard_space_desc":"Esto me ayuda a entender qué tipo de obra funcionaría mejor.","wizard_space_type":"Tipo de espacio","wizard_size":"Tamaño aproximado","wizard_timeline":"Plazo","wizard_atmosphere":"Atmósfera / sensación","wizard_atmosphere_hint":"No necesitas conocer de arte. Cualquier impresión ayuda.","wizard_anything_else":"Algo más que quieras contar","wizard_write_to_me":"Escríbeme","wizard_reply_within":"Te responderé en menos de 24 horas.","wizard_inquire_piece":"Consultar sobre esta obra","privacy_policy":"Política de privacidad","cookies":"Cookies","legal_notice":"Aviso legal"}};
+const availableLanguages = ["en","es"];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
+
+      // Detect language: URL > sessionStorage > browser > default
+      let activeLang = urlLang;
+      if (!urlLang) {
+        const sessionLang = sessionStorage.getItem('detectedLang');
+        if (sessionLang && availableLanguages.includes(sessionLang)) {
+          activeLang = sessionLang;
+        } else {
+          const browserLang = (navigator.language || navigator.userLanguage || '').split('-')[0].toLowerCase();
+          if (availableLanguages.includes(browserLang)) {
+            activeLang = browserLang;
+            sessionStorage.setItem('detectedLang', browserLang);
+            // Redirect to detected language if not default
+            if (browserLang !== defaultLang) {
+              const url = new URL(window.location.href);
+              url.searchParams.set('lang', browserLang);
+              window.location.href = url.toString();
+              return;
+            }
+          } else {
+            activeLang = defaultLang;
+            sessionStorage.setItem('detectedLang', defaultLang);
+          }
+        }
+      }
+
+      // Expose for wizard JS to read
+      window.__lpActiveLang = activeLang;
+      window.__lpUiTranslations = allUiTranslations;
+
+      // Update section translations
+      function updateSectionTranslations(lang) {
+        const langTranslations = allSectionTranslations[lang];
+        if (!langTranslations) return;
+
+        document.querySelectorAll('[data-section]').forEach(sectionEl => {
+          const idx = sectionEl.getAttribute('data-section');
+          const sectionData = langTranslations[idx];
+          if (!sectionData) return;
+
+          sectionEl.querySelectorAll('[data-field]').forEach(fieldEl => {
+            const fieldKey = fieldEl.getAttribute('data-field');
+            if (sectionData[fieldKey] === undefined) return;
+
+            if (fieldEl.hasAttribute('data-field-html')) {
+              // For multi-paragraph / line-break content
+              const val = sectionData[fieldKey];
+              if (val.includes('\n\n')) {
+                fieldEl.innerHTML = val.split('\n\n').filter(p => p.trim()).map(p => '<p>' + p.replace(/\n/g, '<br>') + '</p>').join('');
+              } else {
+                fieldEl.innerHTML = val.replace(/\n/g, '<br>');
+              }
+            } else {
+              fieldEl.textContent = sectionData[fieldKey];
+            }
+          });
+        });
+      }
+
+      // Update UI translations (wizard, footer, etc.)
+      function updateUiTranslations(lang) {
+        const translations = allUiTranslations[lang] || allUiTranslations[defaultLang];
+        if (!translations) return;
+
+        document.querySelectorAll('[data-ui-key]').forEach(el => {
+          const key = el.getAttribute('data-ui-key');
+          if (translations[key]) {
+            el.textContent = translations[key];
+          }
+        });
+      }
+
+      // Apply translations if not default language
+      if (activeLang && activeLang !== defaultLang) {
+        updateSectionTranslations(activeLang);
+        updateUiTranslations(activeLang);
+      }
+
+      // Rewrite internal links to include ?lang=
+      if (activeLang && activeLang !== defaultLang) {
+        document.querySelectorAll('a').forEach(link => {
+          const href = link.getAttribute('href');
+          if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.includes('lang=')) return;
+          if (href.startsWith('/') || !href.includes('://')) {
+            const separator = href.includes('?') ? '&' : '?';
+            link.setAttribute('href', `${href}${separator}lang=${activeLang}`);
+          }
+        });
+      }
+
+      // Language selector
+      const languageSelect = document.getElementById('lp-language-select');
+      if (languageSelect) {
+        languageSelect.value = activeLang;
+
+        languageSelect.addEventListener('change', (e) => {
+          const newLang = e.target.value;
+          sessionStorage.setItem('detectedLang', newLang);
+          const url = new URL(window.location.href);
+          if (newLang === defaultLang) {
+            url.searchParams.delete('lang');
+          } else {
+            url.searchParams.set('lang', newLang);
+          }
+          window.location.href = url.toString();
+        });
+      }
+    });
+  })();</script> </body> </html>
